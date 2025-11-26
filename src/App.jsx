@@ -3,10 +3,6 @@ import { useState } from 'react'
 import './App.css'
 import ButtonAppBar from './ButtonAppBar'
 
-export function ButtonUsage() {
-  return <Button variant="contained">Hello world</Button>;
-}
-
 function App() {
   const [count, setCount] = useState(0)
 
