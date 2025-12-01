@@ -6,13 +6,14 @@ function TimerApp() { // Change function to export and App to a different name
   const [time, setTime] = useState(25 * 60); // 25 minutes in seconds
  const [isRunning, setIsRunning] = useState(false);
  const [mode, setMode] = useState('work'); // 'work' or 'break'
+ const [cycles, setCycles] = useState(0);
 
  useEffect(() => {
     let timer;
     if (isRunning) {
         timer = setInterval(() => {
-            setTime((prevTime) => {
-                if (prevTime === 1) {
+            setTime((prev) => {
+                if (prev === 1) {
                     handleTimerEnd();
                     return 0;
                 }

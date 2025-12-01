@@ -11,6 +11,7 @@ function App() {
   return (
     <>
     <ButtonAppBar />
+    <TimerApp />
       <h1>The Best Pomodoro Timer Ever</h1>
       <div className="card">
         <p>
