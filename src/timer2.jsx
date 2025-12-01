@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-function App() { // Change function to export and App to a different name
+function TimerApp() { // Change function to export and App to a different name
   const [time, setTime] = useState(25 * 60); // 25 minutes in seconds
  const [isRunning, setIsRunning] = useState(false);
  const [mode, setMode] = useState('work'); // 'work' or 'break'
@@ -83,4 +83,4 @@ const styles = {
     },
 };
 
-export default App;
+export default TimerApp;

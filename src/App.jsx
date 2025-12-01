@@ -1,19 +1,18 @@
 import { useState } from 'react'
+import { useEffect } from 'react';
 
 import './App.css'
 import ButtonAppBar from './ButtonAppBar'
+import TimerApp from './timer2.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+//  const [count, setCount] = useState(0)
 
   return (
     <>
     <ButtonAppBar />
       <h1>The Best Pomodoro Timer Ever</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
         <p>
           Starting template for an epic app
         </p>
@@ -26,3 +25,4 @@ function App() {
 }
 
 export default App
+
