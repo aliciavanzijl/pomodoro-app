@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { useEffect } from 'react';
 
 import './App.css'
 import ButtonAppBar from './ButtonAppBar'
@@ -11,8 +9,8 @@ function App() {
   return (
     <>
     <ButtonAppBar />
-    <TimerApp />
       <h1>The Best Pomodoro Timer Ever</h1>
+      <TimerApp />
       <div className="card">
         <p>
           Starting template for an epic app

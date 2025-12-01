@@ -3,10 +3,10 @@
 import React, { useState, useEffect } from 'react';
 
 function TimerApp() { // Change function to export and App to a different name
-  const [time, setTime] = useState(25 * 60); // 25 minutes in seconds
- const [isRunning, setIsRunning] = useState(false);
- const [mode, setMode] = useState('work'); // 'work' or 'break'
- const [cycles, setCycles] = useState(0);
+    const [time, setTime] = useState(25 * 60); // 25 minutes in seconds
+    const [isRunning, setIsRunning] = useState(false);
+    const [mode, setMode] = useState("work"); // 'work' or 'break'
+    const [cycles, setCycles] = useState(0);
 
  useEffect(() => {
     let timer;
@@ -26,25 +26,21 @@ function TimerApp() { // Change function to export and App to a different name
 
  const handleTimerEnd = () => {
     setIsRunning(false);
-    if (mode === 'work') {
-        setMode('break');
+    if (mode === "work") {
+        setMode("break");
         setTime(5 * 60); // 5 minutes break
     } else {
-        setMode('work');
+        setMode("work");
         setTime(25 * 60); // 25 minutes work
         setCycles((c) => c + 1);
     }
-    };
+};
 
-    const formatTime = () => {
-        const mins = Math.floor(time / 60);
-        const secs = time % 60;
-        return `${mins.toString().padStart(2, '0')}:${secs
-            .toString()
-            .padStart(2, '0')}`;
-        const seconds = (time % 60).toString().padStart(2, '0');
-        return `${mins}:${secs}`;
-    };
+const formatTime = () => {
+    const mins = Math.floor(time / 60).toString().padStart(2,"0");
+    const secs = (time % 60).toString().padStart(2, "0");
+    return `${mins}:${secs}`;
+};
 
 const handleReset = () => {
     setIsRunning(false);
@@ -52,8 +48,7 @@ const handleReset = () => {
  };
 
  return (
-    <div style={Styles.container}>
-        <h1>Pomodoro Timer</h1>
+    <div style={styles.container}>
         <h2>{mode === "work" ? "Work Time" : "Break Time"}</h2>
         <div style={styles.timer}>{formatTime()}</div>
         <div style={styles.buttons}>
