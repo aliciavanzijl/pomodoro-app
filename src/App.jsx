@@ -3,24 +3,28 @@ import './App.css'
 import ButtonAppBar from './ButtonAppBar'
 import TimerApp from './timer2.jsx'
 import VisualTimer from './VisualTimer.jsx'
+import NavBar from './NavBar.jsx'
+import { Route, Routes } from "react-router-dom"
+
 
 function App() {
 //  const [count, setCount] = useState(0)
 
   return (
     <>
-    <ButtonAppBar />
-      <h1>The Best Pomodoro Timer Ever</h1>
-      <TimerApp />
-      <VisualTimer />
-      <div className="card">
-        <p>
-          Starting template for an epic app
-        </p>
+    <div className='navigation-box'>
+      <div className="navigation-bars">
+        <ButtonAppBar />
+        <h1>The Best Pomodoro Timer Ever</h1>
+        <NavBar />
       </div>
-      <p className="read-the-docs">
-        Leaving this text here - see App.cs to see the custom class
-      </p>
+    </div> 
+    <div className="timers">
+      <Routes>
+        <Route path="/" element={<TimerApp />} />
+        <Route path="/visualtimer" element={<VisualTimer />} />
+      </Routes>
+    </div>
     </>
   )
 }
