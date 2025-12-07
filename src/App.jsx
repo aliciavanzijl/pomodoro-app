@@ -2,6 +2,7 @@
 import './App.css'
 import ButtonAppBar from './ButtonAppBar'
 import TimerApp from './timer2.jsx'
+import VisualTimer from './VisualTimer.jsx'
 
 function App() {
 //  const [count, setCount] = useState(0)
@@ -11,6 +12,7 @@ function App() {
     <ButtonAppBar />
       <h1>The Best Pomodoro Timer Ever</h1>
       <TimerApp />
+      <VisualTimer />
       <div className="card">
         <p>
           Starting template for an epic app
